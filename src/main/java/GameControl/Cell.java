@@ -28,7 +28,7 @@ public class Cell
 
 
 
-    private Cell(int id)
+    Cell(int id)
     {
         this.id = id;
 
