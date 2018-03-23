@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:id="mainPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="300.0" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+   <children>
+      <Pane fx:id="menuPane" maxWidth="-Infinity" prefHeight="800.0" prefWidth="300.0">
+         <children>
+            <RadioButton fx:id="beginner" layoutX="85.0" layoutY="14.0" mnemonicParsing="false" onAction="#customizedNotSelected" selected="true" text="Beginner">
+               <toggleGroup>
+                  <ToggleGroup fx:id="selectedDifficulty" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="intermediate" layoutX="85.0" layoutY="50.0" mnemonicParsing="false" onAction="#customizedNotSelected" selected="true" text="Intermediate" toggleGroup="$selectedDifficulty" />
+            <RadioButton fx:id="expert" layoutX="85.0" layoutY="92.0" mnemonicParsing="false" onAction="#customizedNotSelected" text="Expert" toggleGroup="$selectedDifficulty" />
+            <RadioButton fx:id="customized" layoutX="85.0" layoutY="127.0" mnemonicParsing="false" onAction="#selectCustomized" text="Customized" toggleGroup="$selectedDifficulty" />
+            <Button fx:id="startButton" layoutX="110.0" layoutY="205.0" mnemonicParsing="false" onAction="#startGame" text="Start" />
+            <Button fx:id="restartButton" disable="true" layoutX="14.0" layoutY="235.0" mnemonicParsing="false" onAction="#restartGame" text="Restart" />
+            <Button fx:id="newGameButton" disable="true" layoutX="201.0" layoutY="235.0" mnemonicParsing="false" onAction="#newGame" text="New Game" />
+            <TextField fx:id="minesTextField" editable="false" layoutX="257.0" layoutY="161.0" prefHeight="27.0" prefWidth="37.0" />
+            <TextField fx:id="columnsTextField" editable="false" layoutX="72.0" layoutY="161.0" prefHeight="27.0" prefWidth="36.0" />
+            <TextField fx:id="rowsTextField" editable="false" layoutX="164.0" layoutY="161.0" prefHeight="27.0" prefWidth="38.0" />
+            <Label layoutX="8.0" layoutY="167.0" text="Columns :" />
+            <Label layoutX="117.0" layoutY="167.0" text="Rows :" />
+            <Label layoutX="211.0" layoutY="166.0" text="Mines :" />
+            <Label fx:id="message" layoutX="65.0" layoutY="283.0" text="Game : Not Started" />
+            <Label fx:id="timerLabel" layoutX="107.0" layoutY="314.0" text="Score :" />
+            <Button fx:id="testButton" layoutX="95.0" layoutY="413.0" mnemonicParsing="false" onAction="#test" text="Button" />
+         </children>
+      </Pane>
+      <Pane fx:id="gridContainer" layoutX="300.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="900.0" />
+   </children>
+</AnchorPane>
